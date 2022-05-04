@@ -7,7 +7,6 @@
     <title color="white">The influence of technology in music</title>
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,17 @@
             </div>
         </div>
     </nav>
-
+   <script>
+        // function "submitted" that opens a new window in google with 
+        // the input of the user, opens a new tab and focuses on the new window
+        function submitted(event) {
+            // prevents the form from being submitted if it is able be prevented, avoids default
+            event.preventDefault();
+            window.open("https://www.google.com/search?q=%3A+" + document.getElementById('search').value, '_blank').focus();
+        }
+        // The event listener is so that we know when someone presses the search button and run the function "submitted"
+        document.getElementById('form').addEventListener('submit', submitted);
+    </script>
     <section id="main">
         <h1 id="advancements">Landmark technological advancements</h1>
         <h2>Landmarks</h2>
